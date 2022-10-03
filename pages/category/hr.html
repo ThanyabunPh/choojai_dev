@@ -173,3 +173,21 @@
         </div>
     </div>
 </div>
+
+<script>
+    const queryString = decodeURIComponent(window.location.search);
+    const params = new URLSearchParams(queryString);
+    if (params.get("insight") == "student") {
+        document.body.innerHTML = "";
+        $("#dynamicBody").load("insight/IN_student.html");
+    } else if (params.get("category") == "student") {
+        document.body.innerHTML = "";
+        $("#dynamicBody").load("category/student.html");
+    } else if (params.get("category") == "hospital") {
+        document.body.innerHTML = "";
+        $("#dynamicBody").load("category/hospital.html");
+    } else if (params.get("category") == "management") {
+        document.body.innerHTML = "";
+        $("#dynamicBody").load("category/management.html");
+    }
+</script>
