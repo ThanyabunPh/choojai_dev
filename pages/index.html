@@ -130,8 +130,8 @@
             } else {
                 liff.login({ redirectUri: "https://thanyabunphu.github.io/ChujaiDev/pages" })
             }
-            if (liff.getFriendship().friendFlag) {
-
+            if (!(liff.getFriendship().friendFlag)) {
+                liff.closeWindow()
             }
         })
         const config = getConfig();
